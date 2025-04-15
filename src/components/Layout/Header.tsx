@@ -2,13 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Mail, Phone, Instagram, Facebook, Linkedin, Menu, X } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
-
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
   const navigate = useNavigate();
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -22,17 +20,14 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
   const handleHomeClick = () => {
     navigate('/');
     window.scrollTo(0, 0);
     setIsMobileMenuOpen(false);
   };
-
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-white py-4'}`}>
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">
@@ -61,24 +56,17 @@ const Header = () => {
         </div>
         
         <div className="flex justify-between items-center">
-          <Link 
-            to="/" 
-            onClick={handleHomeClick}
-            className="transition-all duration-300 transform hover:scale-[1.02]"
-          >
+          <Link to="/" onClick={handleHomeClick} className="transition-all duration-300 transform hover:scale-[1.02]">
             <img alt="Master Sistemas de Tecnologia e Segurança" src="/lovable-uploads/d395a23d-995a-40f9-92e6-d8e2f9f627d0.jpg" className="h-16 md:h-24" />
           </Link>
           
           <nav className="hidden md:flex space-x-1">
-            <button 
-              onClick={handleHomeClick} 
-              className="nav-link"
-            >
+            <button onClick={handleHomeClick} className="nav-link">
               Início
             </button>
             <a href="#about" className="nav-link">Sobre Nós</a>
             <a href="#services" className="nav-link">Serviços</a>
-            <a href="#team" className="nav-link">Equipe</a>
+            
             <a href="#contact" className="nav-link">Contato</a>
           </nav>
           
@@ -90,10 +78,7 @@ const Header = () => {
       
       <div className={`md:hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}>
         <div className="container-custom py-4 flex flex-col space-y-3 border-t mt-4">
-          <button 
-            onClick={handleHomeClick} 
-            className="px-4 py-2 text-gray-700 hover:text-master-orange hover:bg-gray-50 rounded-md text-left"
-          >
+          <button onClick={handleHomeClick} className="px-4 py-2 text-gray-700 hover:text-master-orange hover:bg-gray-50 rounded-md text-left">
             Início
           </button>
           <a href="#about" className="px-4 py-2 text-gray-700 hover:text-master-orange hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Sobre Nós</a>
@@ -104,5 +89,4 @@ const Header = () => {
       </div>
     </header>;
 };
-
 export default Header;
