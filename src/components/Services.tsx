@@ -9,7 +9,7 @@ const services = [
     title: 'CÂMERAS DE SEGURANÇA',
     description: 'Planejamos e executamos projetos customizados e integrados de CFTV analógicos e IP com alta definição e recursos analíticos que vão desde reconhecimento facial, leitura de placas de veículos, objetos deixados, objetos retirados, tudo isso agregados a software de monitoramento que trabalham em conjuntos com esse analíticos.',
     icon: Video,
-    image: "/lovable-uploads/6b3beb1b5d084ba69bfa047bc5b68cf0.png",
+    image: "/lovable-uploads/6b3beb1b5d084ba69bfa047bc5b68cf0.jpg",
     delay: '0s'
   },
   {
@@ -17,7 +17,7 @@ const services = [
     title: 'ALARME DE INTRUSÃO MONITORADO 24H',
     description: 'Os equipamentos de monitoramento de alarme são configurados para trabalhar em perfeita harmonia com o ambiente do cliente, cobrindo pontos vulneráveis e entregando um eficiente sistema de segurança eletrônica.Além da possibilidade de o cliente ter o aplicativo para operar o sistema direto de seu smartfone',
     icon: Bell,
-    image: "/lovable-uploads/f3b07998ceb34b53812dfea4b8c7d5ca.png",
+    image: "/lovable-uploads/f3b07998ceb34b53812dfea4b8c7d5ca.jpg",
     delay: '0.1s'
   },
   {
@@ -25,7 +25,7 @@ const services = [
     title: 'CONTROLE DE ACESSO',
     description: 'Nossos projetos em controle de acesso de pessoas e veículos, visa garantir a segurança de empresa, prédios comerciais e residenciais, escritórios e residências e poder garantir apenas a entrada de pessoas autorizadas e monitorar em tempo real e por relatórios quem acessou determinado local com data e hora do evento, além da possibilidade controlar a saída desse determinado local e conseguir analisar quanto tempo a pessoa permaneceu.',
     icon: Fingerprint,
-    image: "/lovable-uploads/f2a4ee8b40b1465ab9ee9fef578b9658.png",
+    image: "/lovable-uploads/f2a4ee8b40b1465ab9ee9fef578b9658.jpg",
     delay: '0.2s'
   },
   {
