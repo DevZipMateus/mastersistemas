@@ -9,7 +9,7 @@ const services = [
     title: 'CÂMERAS DE SEGURANÇA',
     description: 'Planejamos e executamos projetos customizados e integrados de CFTV analógicos e IP com alta definição e recursos analíticos que vão desde reconhecimento facial, leitura de placas de veículos, objetos deixados, objetos retirados, tudo isso agregados a software de monitoramento que trabalham em conjuntos com esse analíticos.',
     icon: Video,
-    image: "/lovable-uploads/6b3beb1b5d084ba69bfa047bc5b68cf0.jpg",
+    image: "public/lovable-uploads/6b3beb1b5d084ba69bfa047bc5b68cf0.jpg",
     delay: '0s'
   },
   {
