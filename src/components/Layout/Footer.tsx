@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-master-blue text-white">
@@ -42,7 +40,7 @@ const Footer = () => {
                 <a href="#services" className="hover:text-master-orange transition-colors duration-300 inline-block">Serviços</a>
               </li>
               <li>
-                <a href="#team" className="hover:text-master-orange transition-colors duration-300 inline-block">Equipe</a>
+                
               </li>
               <li>
                 <a href="#contact" className="hover:text-master-orange transition-colors duration-300 inline-block">Contato</a>
@@ -81,4 +79,3 @@ const Footer = () => {
     </footer>;
 };
 export default Footer;
-
