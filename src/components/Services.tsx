@@ -7,73 +7,73 @@ const services = [
   {
     id: 1,
     title: 'CÂMERAS DE SEGURANÇA',
-    description: 'Sistemas avançados de câmeras de vigilância com alta resolução, visão noturna e acesso remoto via smartphone.',
+    description: 'Planejamos e executamos projetos customizados e integrados de CFTV analógicos e IP com alta definição e recursos analíticos que vão desde reconhecimento facial, leitura de placas de veículos, objetos deixados, objetos retirados, tudo isso agregados a software de monitoramento que trabalham em conjuntos com esse analíticos.',
     icon: Video,
-    image: "/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png",
+    image: "/lovable-uploads/6b3beb1b5d084ba69bfa047bc5b68cf0.png",
     delay: '0s'
   },
   {
     id: 2,
     title: 'ALARME DE INTRUSÃO MONITORADO 24H',
-    description: 'Proteção completa para residências e empresas com monitoramento profissional 24 horas e notificações instantâneas.',
+    description: 'Os equipamentos de monitoramento de alarme são configurados para trabalhar em perfeita harmonia com o ambiente do cliente, cobrindo pontos vulneráveis e entregando um eficiente sistema de segurança eletrônica.Além da possibilidade de o cliente ter o aplicativo para operar o sistema direto de seu smartfone',
     icon: Bell,
-    image: "/lovable-uploads/86341d84-a284-4386-918e-74d010ada782.png",
+    image: "/lovable-uploads/f3b07998ceb34b53812dfea4b8c7d5ca.png",
     delay: '0.1s'
   },
   {
     id: 3,
     title: 'CONTROLE DE ACESSO',
-    description: 'Sistemas inteligentes de controle de acesso com tecnologia biométrica, cartões RFID e integração com aplicativos móveis.',
+    description: 'Nossos projetos em controle de acesso de pessoas e veículos, visa garantir a segurança de empresa, prédios comerciais e residenciais, escritórios e residências e poder garantir apenas a entrada de pessoas autorizadas e monitorar em tempo real e por relatórios quem acessou determinado local com data e hora do evento, além da possibilidade controlar a saída desse determinado local e conseguir analisar quanto tempo a pessoa permaneceu.',
     icon: Fingerprint,
-    image: "/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png",
+    image: "/lovable-uploads/f2a4ee8b40b1465ab9ee9fef578b9658.png",
     delay: '0.2s'
   },
   {
     id: 4,
-    title: 'Automação Residencial',
-    description: 'Soluções integradas de automação para controle de iluminação, climatização e outros sistemas, proporcionando conforto e economia.',
+    title: 'AUTOMATIZADOR DE PORTAS E PORTÕES',
+    description: 'Com os automatizadores de portas e portões você pode garantir segurança e conforto ao acessar sua empresa, condomínio ou residência de modo que no processo automatizado não terá a necessidade de descer do veiculo garantido mais rapidez ao adentrar seu local e não precisar ter de sair na chuva para abrir um portão.',
     icon: Home,
-    image: "/lovable-uploads/d395a23d-995a-40f9-92e6-d8e2f9f627d0.jpg",
+    image: "/lovable-uploads/25a1ce369cd44010b62ceb6457bf4431.jpg",
     delay: '0.3s'
   },
   {
     id: 5,
-    title: 'Segurança Perimetral',
-    description: 'Proteção avançada do perímetro com sensores de movimento, cercas elétricas e sistemas de detecção de invasão.',
+    title: 'COMUNICAÇÃO CONDOMINIAL E INTERFONIA RESIDENCIAL E COMERCIAL',
+    description: 'Os sistemas de interfones convencionais e comunicação para condomínios residências e comerciais, garante a segurança e o conforto ao poder estar ciente de quem está pedindo liberação de entrada sem ter a necessidade de ir atender pessoalmente para liberação da mesma.',
     icon: Shield,
-    image: "/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg",
+    image: "/lovable-uploads/912840887a2642ec85f65abfb34ecdcf.jpg",
     delay: '0.4s'
   },
   {
     id: 6,
-    title: 'Redes e Infraestrutura',
-    description: 'Projetos e instalação de redes estruturadas, cabeamento, servidores e soluções de backup para empresas de todos os portes.',
+    title: 'FECHADURAS DIGITAIS',
+    description: 'Com a fechaduras digitais inteligentes você garante conforto ao adentrar sua casa, apartamento ou escritório não tendo a necessidade de chaves e realizando um acesso fácil através de senha, RFID ou biometria.Além disso alguns modelos oferecem conectividade com sistemas de automação como Alexa, Google, Aple e aplicativo que você pode destravar a fechadura de qualquer lugar do mundo além de poder liberar senhas temporárias para algum visitante ou prestador de serviço',
     icon: Cpu,
-    image: "/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg",
+    image: "/lovable-uploads/3b0317a8ff634dcf902c2e6fcccb1f67.jpg",
     delay: '0.5s'
   },
   {
     id: 7,
-    title: 'Consultoria em Segurança',
-    description: 'Análise de vulnerabilidades e recomendações personalizadas para implementação de soluções de segurança integradas.',
+    title: 'REDE DE DADOS, VOZ E WI-FI',
+    description: 'Trabalhamos com a Instalação, manutenção e ampliação de redes estruturadas de dados e voz além de redes Wi-Fi corporativas e residências, garantido conectividade aos colaboradores ou dispositivos, dentro das normas e padrões ITIL.',
     icon: BarChart,
-    image: "/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg",
+    image: "/lovable-uploads/690d427a892148adaadfa77d6653efd4.jpg",
     delay: '0.6s'
   },
   {
     id: 8,
-    title: 'Sistemas de Detecção de Incêndio',
-    description: 'Instalação e manutenção de sistemas de detecção e alarme de incêndio, cumprindo normas e regulamentações.',
+    title: 'INSTALAÇÃO E MANUTENÇÃO ELÉTRICA ',
+    description: 'Realizamos manutenções e instalações elétricas de acordo com NBR 5410 e os padrões de segurança estabelecidos para garantir uma eficiente demanda ao cliente de sua necessidade.',
     icon: AlertTriangle,
-    image: "/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg",
+    image: "/lovable-uploads/8ab0573509364fc293a3b52f97cdaa4a.jpg",
     delay: '0.7s'
   },
   {
     id: 9,
-    title: 'Fechaduras Eletrônicas',
-    description: 'Soluções modernas de fechaduras inteligentes com acesso por senha, biometria ou cartão, integrando-se ao seu sistema de segurança.',
+    title: 'CONTRATOS DE MANUTENÇÃO PARA CONDOMÍNIOS E EMPRESAS',
+    description: 'Realizamos manutenções preventivas e corretivas em sistemas de segurança eletrônica e comunicação, através de contratos que podem ser realizadas semanal, quinzenal ou mensal as preventivas para checklists de todo o sistemas, limpeza, lubrificação e ajustes, além das manutenções corretivas se vier a ter algum defeito no sistema ou equipamento.',
     icon: Lock,
-    image: "/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg",
+    image: "/lovable-uploads/29b696e8c19544c5b1b04a7478adb05c.jpg",
     delay: '0.8s'
   }
 ];
