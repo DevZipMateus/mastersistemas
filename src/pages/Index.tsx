@@ -6,8 +6,6 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import AboutUs from '../components/AboutUs';
 import Team from '../components/Team';
-import Plans from '../components/Plans';
-import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import FloatingButton from '../components/FloatingButton';
 
@@ -15,6 +13,9 @@ const Index = () => {
   // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Meta tags for SEO
+    document.title = 'Master Sistemas de Tecnologia e Segurança | Soluções em Tecnologia e Segurança';
   }, []);
 
   return (
@@ -26,8 +27,6 @@ const Index = () => {
         <Services />
         <AboutUs />
         <Team />
-        <Plans />
-        <Testimonials />
         <Contact />
       </main>
       
