@@ -1,14 +1,11 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, Instagram, Menu, X } from 'lucide-react';
 import { useIsMobile } from '../../hooks/use-mobile';
-
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -17,19 +14,15 @@ const Header = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-white py-4'}`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-white py-4'}`}>
       {/* Top Bar with Contact Info and Social Media */}
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:justify-between items-center mb-4 md:mb-2">
@@ -57,11 +50,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="transition-all duration-300 transform hover:scale-[1.02]">
-            <img 
-              src="/lovable-uploads/86341d84-a284-4386-918e-74d010ada782.png" 
-              alt="Master Sistemas de Tecnologia e Segurança" 
-              className="h-10 md:h-12"
-            />
+            <img alt="Master Sistemas de Tecnologia e Segurança" src="/lovable-uploads/d395a23d-995a-40f9-92e6-d8e2f9f627d0.jpg" className="h-16 md:h-24" />
           </Link>
           
           {/* Desktop Navigation */}
@@ -74,11 +63,7 @@ const Header = () => {
           </nav>
           
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-gray-600 hover:text-master-orange focus:outline-none"
-            onClick={toggleMobileMenu}
-            aria-label="Menu"
-          >
+          <button className="md:hidden text-gray-600 hover:text-master-orange focus:outline-none" onClick={toggleMobileMenu} aria-label="Menu">
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -94,8 +79,6 @@ const Header = () => {
           <a href="#contact" className="px-4 py-2 text-gray-700 hover:text-master-orange hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Contato</a>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
