@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useIsMobile } from '../hooks/use-mobile';
@@ -8,6 +7,15 @@ const Contact = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
+    // Only load the script if map container exists
+    if (!mapRef.current) return;
+    
+    // Check if Google Maps is already loaded
+    if (window.google && window.google.maps) {
+      initializeMap();
+      return;
+    }
+    
     // Load Google Maps script
     const googleMapsScript = document.createElement('script');
     googleMapsScript.src = `https://maps.googleapis.com/maps/api/js?key=&libraries=places`;
@@ -17,13 +25,15 @@ const Contact = () => {
     document.head.appendChild(googleMapsScript);
     
     return () => {
-      // Clean up
-      document.head.removeChild(googleMapsScript);
+      // Clean up only if the script was added by this component
+      if (document.head.contains(googleMapsScript)) {
+        document.head.removeChild(googleMapsScript);
+      }
     };
   }, []);
   
   const initializeMap = () => {
-    if (typeof google === 'undefined' || !mapRef.current) return;
+    if (!window.google || !window.google.maps || !mapRef.current) return;
     
     // Coordenadas da Avenida Marechal Câmara N 160, Rio de Janeiro
     const location = { lat: -22.908333, lng: -43.175090 };
@@ -79,16 +89,16 @@ const Contact = () => {
       ]
     };
     
-    const map = new google.maps.Map(mapRef.current, mapOptions);
+    const map = new window.google.maps.Map(mapRef.current, mapOptions);
     
-    const marker = new google.maps.Marker({
+    const marker = new window.google.maps.Marker({
       position: location,
       map: map,
       title: 'Master Sistemas de Tecnologia e Segurança',
-      animation: google.maps.Animation.DROP
+      animation: window.google.maps.Animation.DROP
     });
     
-    const infoWindow = new google.maps.InfoWindow({
+    const infoWindow = new window.google.maps.InfoWindow({
       content: `
         <div style="width: 200px; text-align: center;">
           <h3 style="margin: 0; color: #0c2340; font-weight: 500;">Master Sistemas</h3>
