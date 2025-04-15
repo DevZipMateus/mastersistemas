@@ -1,5 +1,7 @@
+
 import React from 'react';
-import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-master-blue text-white">
@@ -57,6 +59,12 @@ const Footer = () => {
               <a href="https://www.instagram.com/segmaster" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-white/10 hover:bg-master-orange/80 hover:text-white transition-colors duration-300 p-2 rounded-full">
                 <Instagram size={20} />
               </a>
+              <a href="https://www.facebook.com/share/z7uyVtn3LFDeHXpC/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-white/10 hover:bg-master-orange/80 hover:text-white transition-colors duration-300 p-2 rounded-full">
+                <Facebook size={20} />
+              </a>
+              <a href="https://linkedin.com/#mstecseg" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-white/10 hover:bg-master-orange/80 hover:text-white transition-colors duration-300 p-2 rounded-full">
+                <Linkedin size={20} />
+              </a>
             </div>
             
             <div className="mt-8">
@@ -73,3 +81,4 @@ const Footer = () => {
     </footer>;
 };
 export default Footer;
+
