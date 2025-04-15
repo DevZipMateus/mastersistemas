@@ -89,6 +89,22 @@ const Services = () => {
           ))}
         </div>
         
+        {/* Youtube Video Section */}
+        <div className="mt-16 mb-8">
+          <div className="w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
+            <div className="aspect-w-16 aspect-h-9 relative">
+              <iframe 
+                className="w-full h-full absolute inset-0"
+                src="https://www.youtube.com/embed/1WvMZB-E_AI" 
+                title="Vídeo sobre Master Sistemas de Tecnologia e Segurança" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        
         {/* CTA */}
         <div className="mt-16 text-center">
           <a 
