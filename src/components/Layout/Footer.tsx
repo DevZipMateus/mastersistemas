@@ -1,12 +1,8 @@
-
 import React from 'react';
 import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-master-blue text-white">
+  return <footer className="bg-master-blue text-white">
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Information */}
@@ -29,7 +25,9 @@ const Footer = () => {
           </div>
           
           {/* Quick Links */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: '0.1s'
+        }}>
             <h3 className="text-xl font-semibold mb-6">Links Rápidos</h3>
             <ul className="space-y-3">
               <li>
@@ -51,7 +49,9 @@ const Footer = () => {
           </div>
           
           {/* Social Media */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
             <h3 className="text-xl font-semibold mb-6">Redes Sociais</h3>
             <div className="flex space-x-4 mb-6">
               <a href="https://www.instagram.com/segmaster" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-white/10 hover:bg-master-orange/80 hover:text-white transition-colors duration-300 p-2 rounded-full">
@@ -60,11 +60,7 @@ const Footer = () => {
             </div>
             
             <div className="mt-8">
-              <img 
-                src="/lovable-uploads/86341d84-a284-4386-918e-74d010ada782.png" 
-                alt="Master Sistemas de Tecnologia e Segurança" 
-                className="h-12 bg-white p-2 rounded-md"
-              />
+              <img alt="Master Sistemas de Tecnologia e Segurança" src="/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg" className="h-24 bg-white p-2 rounded-md" />
             </div>
           </div>
         </div>
@@ -74,8 +70,6 @@ const Footer = () => {
           <p>© {currentYear} Master Sistemas de Tecnologia e Segurança. Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
