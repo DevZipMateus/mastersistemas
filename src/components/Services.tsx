@@ -2,6 +2,12 @@
 import React from 'react';
 import { Shield, Cpu, Video, AlertTriangle, Fingerprint, Home, BarChart, ArrowRight, Lock, Bell } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { 
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from "@/components/ui/accordion";
 
 const services = [
   {
@@ -119,8 +125,17 @@ const Services = () => {
                 <div className="bg-master-orange/10 p-3 rounded-lg inline-block mb-5">
                   <service.icon className="text-master-orange" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-master-blue">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value={`service-${service.id}`} className="border-0">
+                    <AccordionTrigger className="py-0 text-xl font-semibold text-master-blue hover:no-underline">
+                      {service.title}
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-gray-600 pt-3">{service.description}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
             </div>
           ))}
