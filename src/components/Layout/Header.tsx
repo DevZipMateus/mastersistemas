@@ -83,7 +83,7 @@ const Header = () => {
           </button>
           <a href="#about" className="px-4 py-2 text-gray-700 hover:text-master-orange hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Sobre Nós</a>
           <a href="#services" className="px-4 py-2 text-gray-700 hover:text-master-orange hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Serviços</a>
-          <a href="#team" className="px-4 py-2 text-gray-700 hover:text-master-orange hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Equipe</a>
+          
           <a href="#contact" className="px-4 py-2 text-gray-700 hover:text-master-orange hover:bg-gray-50 rounded-md" onClick={toggleMobileMenu}>Contato</a>
         </div>
       </div>
