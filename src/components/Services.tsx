@@ -1,56 +1,80 @@
 
 import React from 'react';
-import { Shield, Cpu, Video, AlertTriangle, Fingerprint, Home, BarChart, ArrowRight } from 'lucide-react';
+import { Shield, Cpu, Video, AlertTriangle, Fingerprint, Home, BarChart, ArrowRight, Lock, Bell } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const services = [
   {
     id: 1,
-    title: 'Sistemas de Alarme',
-    description: 'Sistemas de alarme profissionais para proteção residencial e comercial com monitoramento 24h.',
-    icon: AlertTriangle,
+    title: 'CÂMERAS DE SEGURANÇA',
+    description: 'Sistemas avançados de câmeras de vigilância com alta resolução, visão noturna e acesso remoto via smartphone.',
+    icon: Video,
+    image: "/lovable-uploads/9a8edb27-0fd0-49ff-9165-64acf1186a7f.png",
     delay: '0s'
   },
   {
     id: 2,
-    title: 'CFTV',
-    description: 'Circuito fechado de TV com câmeras de alta resolução e tecnologia IP para monitoramento remoto.',
-    icon: Video,
+    title: 'ALARME DE INTRUSÃO MONITORADO 24H',
+    description: 'Proteção completa para residências e empresas com monitoramento profissional 24 horas e notificações instantâneas.',
+    icon: Bell,
+    image: "/lovable-uploads/86341d84-a284-4386-918e-74d010ada782.png",
     delay: '0.1s'
   },
   {
     id: 3,
-    title: 'Controle de Acesso',
-    description: 'Sistemas modernos para controle de acesso com biometria, cartões, senhas ou reconhecimento facial.',
+    title: 'CONTROLE DE ACESSO',
+    description: 'Sistemas inteligentes de controle de acesso com tecnologia biométrica, cartões RFID e integração com aplicativos móveis.',
     icon: Fingerprint,
+    image: "/lovable-uploads/1fa16bc1-908d-4a63-9c7f-88a25f117f80.png",
     delay: '0.2s'
   },
   {
     id: 4,
-    title: 'Automação',
-    description: 'Soluções de automação para residências e empresas, integrando segurança e conforto.',
+    title: 'Automação Residencial',
+    description: 'Soluções integradas de automação para controle de iluminação, climatização e outros sistemas, proporcionando conforto e economia.',
     icon: Home,
+    image: "/lovable-uploads/d395a23d-995a-40f9-92e6-d8e2f9f627d0.jpg",
     delay: '0.3s'
   },
   {
     id: 5,
-    title: 'Segurança Eletrônica',
-    description: 'Projetos completos de segurança eletrônica adaptados às necessidades de cada cliente.',
+    title: 'Segurança Perimetral',
+    description: 'Proteção avançada do perímetro com sensores de movimento, cercas elétricas e sistemas de detecção de invasão.',
     icon: Shield,
+    image: "/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg",
     delay: '0.4s'
   },
   {
     id: 6,
-    title: 'Infraestrutura de TI',
-    description: 'Serviços de infraestrutura de TI, redes estruturadas e soluções em tecnologia.',
+    title: 'Redes e Infraestrutura',
+    description: 'Projetos e instalação de redes estruturadas, cabeamento, servidores e soluções de backup para empresas de todos os portes.',
     icon: Cpu,
+    image: "/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg",
     delay: '0.5s'
   },
   {
     id: 7,
     title: 'Consultoria em Segurança',
-    description: 'Consultoria especializada para avaliar vulnerabilidades e implementar soluções de segurança adequadas.',
+    description: 'Análise de vulnerabilidades e recomendações personalizadas para implementação de soluções de segurança integradas.',
     icon: BarChart,
+    image: "/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg",
     delay: '0.6s'
+  },
+  {
+    id: 8,
+    title: 'Sistemas de Detecção de Incêndio',
+    description: 'Instalação e manutenção de sistemas de detecção e alarme de incêndio, cumprindo normas e regulamentações.',
+    icon: AlertTriangle,
+    image: "/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg",
+    delay: '0.7s'
+  },
+  {
+    id: 9,
+    title: 'Fechaduras Eletrônicas',
+    description: 'Soluções modernas de fechaduras inteligentes com acesso por senha, biometria ou cartão, integrando-se ao seu sistema de segurança.',
+    icon: Lock,
+    image: "/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg",
+    delay: '0.8s'
   }
 ];
 
@@ -73,18 +97,31 @@ const Services = () => {
         </div>
         
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service) => (
             <div 
               key={service.id} 
-              className="bg-white rounded-lg p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all duration-300 transform hover:scale-[1.02] animate-fade-in"
+              className="bg-white rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-md hover:border-gray-200 transition-all duration-300 transform hover:scale-[1.02] animate-fade-in"
               style={{ animationDelay: service.delay }}
             >
-              <div className="bg-master-orange/10 p-3 rounded-lg inline-block mb-5">
-                <service.icon className="text-master-orange" size={24} />
+              {/* Image Section */}
+              <div className="w-full h-48 overflow-hidden">
+                <AspectRatio ratio={16/9} className="bg-muted">
+                  <img 
+                    src={service.image} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </AspectRatio>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-master-blue">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              
+              <div className="p-6">
+                <div className="bg-master-orange/10 p-3 rounded-lg inline-block mb-5">
+                  <service.icon className="text-master-orange" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-master-blue">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
+              </div>
             </div>
           ))}
         </div>
