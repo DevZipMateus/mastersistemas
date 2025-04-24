@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Shield, Cpu, Video, AlertTriangle, Fingerprint, Home, BarChart, ArrowRight, Lock, Bell, SolarPanel } from 'lucide-react';
+import { Shield, Cpu, Video, AlertTriangle, Fingerprint, Home, BarChart, ArrowRight, Lock, Bell, Sun } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { 
   Accordion,
@@ -85,7 +86,7 @@ const services = [
     id: 10,
     title: 'INSTALAÇÃO FOTOVOLTAICA',
     description: 'Oferecemos soluções completas em energia solar fotovoltaica, desde o projeto até a instalação e manutenção. Nossos sistemas são projetados para maximizar a eficiência energética, reduzir custos com energia elétrica e contribuir para um futuro mais sustentável. Trabalhamos com equipamentos de alta qualidade e equipe especializada para garantir a melhor performance do seu sistema solar.',
-    icon: SolarPanel,
+    icon: Sun,
     image: "/lovable-uploads/5e837bcc-20af-419f-92c1-efd1ae253d69.png",
     delay: '0.9s'
   }
