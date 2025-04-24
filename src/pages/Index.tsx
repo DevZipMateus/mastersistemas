@@ -7,13 +7,12 @@ import Services from '../components/Services';
 import AboutUs from '../components/AboutUs';
 import Contact from '../components/Contact';
 import FloatingButton from '../components/FloatingButton';
+import Accreditation from '../components/Accreditation';
 
 const Index = () => {
-  // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    // Meta tags for SEO
     document.title = 'Master Sistemas de Tecnologia e Segurança | Soluções em Tecnologia e Segurança';
   }, []);
 
@@ -23,6 +22,7 @@ const Index = () => {
       
       <main className="flex-grow">
         <Hero />
+        <Accreditation />
         <Services />
         <AboutUs />
         <Contact />
