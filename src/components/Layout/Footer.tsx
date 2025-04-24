@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Shield } from 'lucide-react';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-master-blue text-white">
@@ -48,12 +49,24 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Social Media */}
+          {/* Accreditation */}
           <div className="animate-fade-in" style={{
           animationDelay: '0.2s'
         }}>
-            <h3 className="text-xl font-semibold mb-6">Redes Sociais</h3>
-            <div className="flex space-x-4 mb-6">
+            <h3 className="text-xl font-semibold mb-6">Credenciamento</h3>
+            <div className="flex items-center gap-2 bg-white/10 p-4 rounded-lg mb-4">
+              <Shield className="text-white" size={24} />
+              <div>
+                <p className="text-sm font-medium">Credenciados ao</p>
+                <p className="font-bold">CRT-RJ</p>
+              </div>
+            </div>
+            <p className="text-sm text-white/70 mb-4">
+              Credenciamento oficial junto ao Conselho Regional dos Técnicos Industriais do Estado do Rio de Janeiro
+            </p>
+            
+            {/* Social Media Icons */}
+            <div className="flex space-x-4">
               <a href="https://www.instagram.com/segmaster" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-white/10 hover:bg-master-orange/80 hover:text-white transition-colors duration-300 p-2 rounded-full">
                 <Instagram size={20} />
               </a>
@@ -63,10 +76,6 @@ const Footer = () => {
               <a href="https://linkedin.com/#mstecseg" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-white/10 hover:bg-master-orange/80 hover:text-white transition-colors duration-300 p-2 rounded-full">
                 <Linkedin size={20} />
               </a>
-            </div>
-            
-            <div className="mt-8">
-              <img alt="Master Sistemas de Tecnologia e Segurança" src="/lovable-uploads/f1eadf42-3539-4476-8905-9a20fb7db6f3.jpg" className="h-24 bg-white p-2 rounded-md" />
             </div>
           </div>
         </div>
